@@ -13,11 +13,17 @@ socket.on('clear', function() {
 })
 
 const circles = document.getElementById('circles');
+const players = document.getElementById('players')
 let initials = '';
 
 do {
   initials = prompt("Please enter your initials").toUpperCase();
 } while (initials.length < 2 || initials.length > 3);
+socket.emit('register-player', initials)
+
+socket.on('update-player-list', function(data) {
+  players.innerHTML = data.map(player => `<li>${player}</li>`).join('');
+})
 
 // Listen for clicks anywhere in the "section"
 circles.addEventListener('click', function(evt) {
