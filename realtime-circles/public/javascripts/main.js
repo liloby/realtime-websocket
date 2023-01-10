@@ -1,3 +1,7 @@
+// get our connection to the socket.io server
+const socket = io();
+console.log(socket);
+
 const circles = document.getElementById('circles');
 let initials = '';
 
