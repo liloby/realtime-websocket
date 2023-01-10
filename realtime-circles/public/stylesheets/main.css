@@ -1,0 +1,59 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#circles {
+  height: 100%;
+}
+
+#circles div {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 100%;
+  z-index: 999;
+  font: lighter 20px "Courier New";
+  color: purple;
+}
+
+header button {
+  margin-right: 30px;
+  padding: 6px;
+  background-color: purple;
+  color: white;
+  border-style: none;
+  border-radius: 4px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  display: inline;
+  font: 12px Arial;
+  color: white;
+  border-radius: 4px;
+  background-color: gray;
+  padding: 4px;
+  margin-right: 5px;
+}
